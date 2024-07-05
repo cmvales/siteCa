@@ -1,0 +1,34 @@
+body, p{
+    padding:0;
+    margin:0;
+    font-size: 1.5rem; /*unidade de medida para o tamanho da fonte*/
+    color:rgb(145, 19, 97) ;
+    font-style: italic;
+    text-align: center;
+}
+.principal{
+    width: 80%;/*para os conteúdos não ficarem colados nas laterais*/
+    margin: 0 auto;
+    display: grid; /*utilizado para alinhar elementos de um conteiner em duas dimensões, geralmente em linhas e colunas*/
+    grid-template-columns: 75% 25%; /*medida para as duas colunas*/
+    grid-template-rows: 100px 450px 150px;
+    grid-template-areas: "cabecalho cabecalho"
+                        "secao barra_lateral"
+                        "rodape rodape";
+}
+header{
+    grid-area:cabecalho;
+    background-color: aquamarine;
+}
+section{
+    grid-area: secao;
+    background-color: #df0000;
+}
+aside{
+    grid-area: barra_lateral;
+    background-color: #df0000;
+}
+footer{
+    grid-area: rodape;
+    background-color: blue;
+}
